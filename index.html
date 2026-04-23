@@ -36,14 +36,6 @@
   .badge-forge{background:#2a1a0a;color:var(--accent5);border:1px solid #5a3a1a}
   .badge-ver{background:#1a1a3a;color:var(--amethyst);border:1px solid #2a2a5a}
 
-  /* ACCOUNT BTN */
-  .header-account{display:flex;align-items:center;gap:.6rem;cursor:pointer;padding:.3rem .75rem;border:1px solid var(--border);border-radius:8px;background:var(--surface2);transition:all .2s;flex-shrink:0;margin-left:.5rem}
-  .header-account:hover{border-color:var(--accent);background:var(--surface3)}
-  .ha-avatar{width:28px;height:28px;border-radius:5px;background:var(--surface3);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
-  .ha-avatar img{width:100%;height:100%;image-rendering:pixelated}
-  .ha-label{font-size:.82rem;font-weight:600;color:var(--text2);white-space:nowrap}
-  .ha-label.signed{color:var(--text)}
-
   /* LAYOUT */
   .wiki-layout{display:grid;grid-template-columns:260px 1fr 220px;max-width:1400px;margin:0 auto;min-height:calc(100vh - 64px);position:relative;z-index:1}
 
@@ -231,88 +223,6 @@
   .rp-name{font-weight:700;font-size:.88rem;color:var(--text);margin-bottom:.2rem}
   .rp-desc{font-size:.75rem;color:var(--text2);line-height:1.5}
 
-  /* INSTALL STEPS */
-  .install-steps{display:grid;gap:.75rem;margin:1rem 0}
-  .install-step{display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;transition:border-color .2s}
-  .install-step:hover{border-color:var(--accent)}
-  .step-num{width:32px;height:32px;border-radius:50%;background:rgba(88,166,255,.15);color:var(--accent);font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(88,166,255,.3)}
-  .step-body{flex:1}
-  .step-title{font-weight:700;font-size:.9rem;color:var(--text);margin-bottom:.3rem}
-  .step-desc{font-size:.82rem;color:var(--text2);line-height:1.6}
-  .step-desc a{color:var(--accent);text-decoration:none}.step-desc a:hover{text-decoration:underline}
-  .step-tag{display:inline-block;padding:.15rem .5rem;border-radius:4px;font-size:.7rem;font-weight:700;margin:.2rem 0;font-family:'JetBrains Mono',monospace;background:var(--surface2);color:var(--accent4);border:1px solid var(--border)}
-
-  /* ═══ LOGIN MODAL ═══ */
-  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(10px);z-index:500;align-items:center;justify-content:center}
-  .modal-overlay.open{display:flex}
-  .modal{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;width:100%;max-width:420px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.6)}
-  .modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--text2);font-size:1.3rem;cursor:pointer;line-height:1;transition:color .15s}
-  .modal-close:hover{color:var(--text)}
-  .modal-title{font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:.3rem}
-  .modal-sub{font-size:.84rem;color:var(--text2);margin-bottom:1.5rem;line-height:1.6}
-  .mc-field label{display:block;font-size:.75rem;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.4rem}
-  .mc-field input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.65rem .9rem;color:var(--text);font-family:'Cairo',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;margin-bottom:.5rem}
-  .mc-field input:focus{border-color:var(--accent)}
-  .mc-hint{font-size:.73rem;color:var(--text3);margin-top:.2rem}
-  .mc-preview{display:flex;align-items:center;gap:.75rem;padding:.7rem .9rem;background:var(--surface2);border:1px solid var(--wiki-line);border-radius:8px;margin-top:.6rem;opacity:0;transition:opacity .3s;pointer-events:none}
-  .mc-preview.show{opacity:1;pointer-events:auto}
-  .mc-preview img{width:36px;height:36px;border-radius:5px;border:1px solid var(--border);image-rendering:pixelated}
-  .mc-preview-name{font-weight:700;font-size:.9rem;color:var(--text)}
-  .mc-preview-uuid{font-size:.68rem;color:var(--text3);font-family:'JetBrains Mono',monospace}
-  .btn-login{width:100%;padding:.7rem;background:var(--accent);color:#0a0c10;border:none;border-radius:8px;font-family:'Cairo',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:all .2s;margin-top:.75rem}
-  .btn-login:hover{background:#79b8ff;transform:translateY(-1px)}
-  .btn-login:disabled{opacity:.45;cursor:not-allowed;transform:none}
-  .btn-cancel-modal{width:100%;padding:.55rem;background:transparent;color:var(--text2);border:1px solid var(--border);border-radius:8px;font-family:'Cairo',sans-serif;font-size:.88rem;cursor:pointer;transition:all .2s;margin-top:.4rem}
-  .btn-cancel-modal:hover{border-color:var(--accent);color:var(--accent)}
-  .login-msg{font-size:.8rem;margin-top:.5rem;display:none}
-  .login-msg.err{color:var(--ruby)}.login-msg.load{color:var(--accent)}
-
-  /* ═══ COMMENTS ═══ */
-  .comments-hdr{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:1px solid var(--wiki-line);flex-wrap:wrap}
-  .comments-hdr-left{display:flex;align-items:center;gap:.75rem}
-  .comments-hdr .section-heading{margin:0;border:none;padding:0;font-size:1.4rem}
-  .comment-count-badge{background:var(--surface2);border:1px solid var(--border);border-radius:100px;padding:.2rem .65rem;font-size:.78rem;font-weight:700;color:var(--accent)}
-  .write-btn{display:flex;align-items:center;gap:.45rem;padding:.45rem 1rem;background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.25);border-radius:8px;color:var(--accent);font-family:'Cairo',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s}
-  .write-btn:hover{background:rgba(88,166,255,.2)}
-
-  /* COMPOSER */
-  .composer{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1.5rem;display:none}
-  .composer.open{display:block}
-  .composer-top{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem}
-  .composer-av{width:36px;height:36px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-  .composer-av img{width:100%;height:100%;image-rendering:pixelated}
-  .composer-user{font-weight:700;font-size:.88rem;color:var(--text)}
-  .composer-sub{font-size:.72rem;color:var(--text3)}
-  .composer-ta{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.85rem 1rem;color:var(--text);font-family:'Cairo',sans-serif;font-size:.9rem;resize:vertical;min-height:90px;outline:none;transition:border-color .2s;line-height:1.6}
-  .composer-ta:focus{border-color:var(--accent)}
-  .composer-actions{display:flex;justify-content:flex-end;gap:.6rem;margin-top:.75rem}
-  .btn-cxl{padding:.45rem 1rem;background:transparent;border:1px solid var(--border);border-radius:7px;color:var(--text2);font-family:'Cairo',sans-serif;font-size:.85rem;cursor:pointer;transition:all .15s}
-  .btn-cxl:hover{border-color:var(--accent);color:var(--accent)}
-  .btn-post{padding:.45rem 1.2rem;background:var(--accent);border:none;border-radius:7px;color:#0a0c10;font-family:'Cairo',sans-serif;font-size:.85rem;font-weight:700;cursor:pointer;transition:all .15s}
-  .btn-post:hover{background:#79b8ff}
-  .btn-post:disabled{opacity:.4;cursor:not-allowed}
-
-  /* COMMENT CARDS */
-  .comments-list{display:grid;gap:.85rem}
-  .comment-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;transition:border-color .2s}
-  .comment-card:hover{border-color:rgba(88,166,255,.2)}
-  .comment-top{display:flex;align-items:flex-start;gap:.85rem}
-  .comment-av{width:40px;height:40px;border-radius:7px;border:1px solid var(--border);overflow:hidden;flex-shrink:0;image-rendering:pixelated}
-  .comment-av img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated}
-  .comment-name{font-weight:700;font-size:.9rem;color:var(--text);display:flex;align-items:center;gap:.45rem;flex-wrap:wrap}
-  .mc-badge{font-size:.65rem;background:rgba(63,185,80,.12);color:var(--emerald);border:1px solid rgba(63,185,80,.25);padding:.1rem .4rem;border-radius:4px;font-weight:600}
-  .comment-time{font-size:.73rem;color:var(--text3);margin-top:.1rem}
-  .comment-body{font-size:.88rem;color:var(--text2);line-height:1.7;margin-top:.65rem;padding-top:.65rem;border-top:1px solid var(--wiki-line)}
-  .comment-footer{display:flex;align-items:center;gap:.75rem;margin-top:.6rem}
-  .like-btn{display:flex;align-items:center;gap:.35rem;background:none;border:1px solid var(--border);border-radius:100px;padding:.2rem .65rem;color:var(--text2);font-size:.78rem;cursor:pointer;transition:all .15s;font-family:'Cairo',sans-serif}
-  .like-btn:hover,.like-btn.liked{border-color:rgba(247,129,102,.4);color:var(--ruby);background:rgba(247,129,102,.08)}
-  .reply-btn{background:none;border:none;color:var(--text3);font-size:.78rem;cursor:pointer;font-family:'Cairo',sans-serif;transition:color .15s;padding:.2rem .3rem}
-  .reply-btn:hover{color:var(--accent)}
-  .del-btn{background:none;border:none;color:var(--text3);font-size:.72rem;cursor:pointer;font-family:'Cairo',sans-serif;transition:color .15s;margin-left:auto;padding:.2rem .3rem}
-  .del-btn:hover{color:var(--ruby)}
-  .comments-empty{text-align:center;padding:3rem 1rem;color:var(--text3)}
-  .comments-empty .ce-icon{font-size:2.8rem;margin-bottom:.75rem;display:block}
-
   /* SCROLLBAR */
   ::-webkit-scrollbar{width:6px;height:6px}
   ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
@@ -329,32 +239,6 @@
 </head>
 <body>
 
-<!-- ═══ LOGIN MODAL ═══ -->
-<div class="modal-overlay" id="loginModal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <div class="modal-title">🎮 Sign in with Minecraft</div>
-    <div class="modal-sub">Enter your Minecraft Java Edition username. Your avatar and name are fetched directly from Mojang's servers.</div>
-    <div class="mc-field">
-      <label>Minecraft Username</label>
-      <input type="text" id="mcInput" placeholder="e.g. Notch" oninput="onMcInput(this.value)" onkeydown="if(event.key==='Enter')doLogin()">
-      <div class="mc-hint">Java Edition only · 3–16 characters</div>
-      <div class="mc-preview" id="mcPreview">
-        <img id="mcPreviewImg" src="" alt="">
-        <div>
-          <div class="mc-preview-name" id="mcPreviewName"></div>
-          <div class="mc-preview-uuid" id="mcPreviewUuid">Java Edition Player</div>
-        </div>
-      </div>
-    </div>
-    <div class="login-msg err" id="loginErr">❌ Username not found. Check spelling and try again.</div>
-    <div class="login-msg load" id="loginLoad">⏳ Looking up your profile…</div>
-    <button class="btn-login" id="loginBtn" onclick="doLogin()">Sign In →</button>
-    <button class="btn-cancel-modal" onclick="closeModal()">Cancel</button>
-  </div>
-</div>
-
-<!-- ═══ HEADER ═══ -->
 <header class="site-header">
   <a href="#" class="site-logo">
     <div class="logo-gem">
@@ -381,11 +265,7 @@
   <div class="header-badges">
     <span class="badge badge-mc">MC 1.20.1</span>
     <span class="badge badge-forge">Forge</span>
-    <span class="badge badge-ver">v1.0.3</span>
-  </div>
-  <div class="header-account" id="headerAccount" onclick="headerAccountClick()">
-    <div class="ha-avatar" id="haAvatar"><span>👤</span></div>
-    <span class="ha-label" id="haLabel">Sign In</span>
+    <span class="badge badge-ver">v1.0.2</span>
   </div>
 </header>
 
@@ -396,7 +276,7 @@
     <div class="toc-title">📋 Contents</div>
     <ul class="toc-list">
       <li class="toc-item"><a href="#overview">Overview</a></li>
-      <li class="toc-item"><a href="#changelog">Changelog (1.0.3)</a></li>
+      <li class="toc-item"><a href="#changelog">Changelog (1.0.2)</a></li>
       <li class="toc-item"><a href="#features">Features</a></li>
       <li class="toc-item sub"><a href="#performance">Performance</a></li>
       <li class="toc-item sub"><a href="#visuals">Visuals</a></li>
@@ -408,7 +288,6 @@
       <div class="toc-section">Info</div>
       <li class="toc-item"><a href="#install-section">Installation</a></li>
       <li class="toc-item"><a href="#requirements">Requirements</a></li>
-      <li class="toc-item"><a href="#comments-section">Community <span class="toc-count" id="tocCmtCount">0</span></a></li>
       <li class="toc-item"><a href="#credits">Credits</a></li>
     </ul>
   </nav>
@@ -430,12 +309,12 @@
       </div>
       <div class="hero-title">Miracul212</div>
       <div class="hero-tagline">A comprehensive Minecraft modpack built on Forge 1.20.1 — blending high performance, stunning visuals, and rich content for an exceptional gameplay experience.</div>
-      <div class="hero-ver-badge">✦ Version 1.0.3 — Latest Release</div>
+      <div class="hero-ver-badge">✦ Version 1.0.2 — Latest Release</div>
     </div>
 
     <div class="article-header" id="overview">
       <div class="article-title">Miracul212</div>
-      <div class="article-subtitle">Comprehensive Minecraft Modpack · Version 1.0.3</div>
+      <div class="article-subtitle">Comprehensive Minecraft Modpack · Version 1.0.2</div>
       <div class="article-meta">
         <div class="meta-chip"><span class="dot dot-green"></span> Active &amp; Updated</div>
         <div class="meta-chip"><span class="dot dot-orange"></span> Forge 1.20.1</div>
@@ -451,14 +330,14 @@
           <div class="infobox-name">Miracul212</div>
         </div>
         <div class="infobox-body">
-          <div class="infobox-row"><div class="infobox-key">Version</div><div class="infobox-val">1.0.3</div></div>
+          <div class="infobox-row"><div class="infobox-key">Version</div><div class="infobox-val">1.0.2</div></div>
           <div class="infobox-row"><div class="infobox-key">Minecraft</div><div class="infobox-val">1.20.1</div></div>
           <div class="infobox-row"><div class="infobox-key">Mod Loader</div><div class="infobox-val">Forge</div></div>
           <div class="infobox-row"><div class="infobox-key">Mods</div><div class="infobox-val">76 mods</div></div>
           <div class="infobox-row"><div class="infobox-key">Shaders</div><div class="infobox-val">10 shaders</div></div>
           <div class="infobox-row"><div class="infobox-key">Resource Packs</div><div class="infobox-val">10 packs</div></div>
           <div class="infobox-row"><div class="infobox-key">File Format</div><div class="infobox-val">.mrpack (Modrinth)</div></div>
-          <div class="infobox-row"><div class="infobox-key">Platform</div><div class="infobox-val"><a href="https://modrinth.com" target="_blank">Modrinth ↗</a></div></div>
+          <div class="infobox-row"><div class="infobox-key">Platform</div><div class="infobox-val"><a href="https://modrinth.com/modpack/miracul212" target="_blank">Modrinth ↗</a></div></div>
         </div>
       </div>
 
@@ -478,23 +357,24 @@
 
     <!-- CHANGELOG -->
     <div class="wiki-section" id="changelog">
-      <div class="section-heading"><span class="sh-icon sh-green">📝</span>Changelog — Version 1.0.3</div>
-      <p class="wiki-p">Version 1.0.3 is a stability and compatibility update — re-enabling previously disabled mods and updating core visual and performance libraries to their latest versions.</p>
-      <div class="notice info"><span class="notice-icon">ℹ️</span><div>Compared to v1.0.2, this release <strong>re-enables Essential and BetterF3</strong>, updates <strong>ModernFix to 5.27.8</strong>, <strong>Entity Model Features to 3.1.1</strong>, and <strong>Entity Texture Features to 7.1</strong>.</div></div>
+      <div class="section-heading"><span class="sh-icon sh-green">📝</span>Changelog — Version 1.0.2</div>
+      <p class="wiki-p">Version 1.0.2 is a refinement update that trims down the component count from 100 to 96 and updates several key mods for improved stability.</p>
+      <div class="notice info"><span class="notice-icon">ℹ️</span><div>Compared to v1.0.1, this release disables <strong>Essential</strong> and <strong>BetterF3</strong>, updates <strong>ModernFix</strong> to 5.27.6, <strong>Supplementaries</strong> to 3.1.43, <strong>Voice Chat</strong> to 2.6.16, and <strong>JEI</strong> to 15.20.0.130.</div></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;">
         <div class="side-widget">
-          <div class="side-widget-header" style="color:var(--emerald)">🟢 Re-Enabled</div>
+          <div class="side-widget-header" style="color:var(--ruby)">🔴 Disabled</div>
           <div class="side-widget-body">
-            <div class="side-stat"><span class="label">Essential</span><span class="value" style="color:var(--emerald);font-size:.75rem">re-enabled ✓</span></div>
-            <div class="side-stat"><span class="label">BetterF3</span><span class="value" style="color:var(--emerald);font-size:.75rem">re-enabled ✓</span></div>
+            <div class="side-stat"><span class="label">Essential</span><span class="value" style="color:var(--text3);font-size:.75rem">disabled</span></div>
+            <div class="side-stat"><span class="label">BetterF3</span><span class="value" style="color:var(--text3);font-size:.75rem">disabled</span></div>
           </div>
         </div>
         <div class="side-widget">
-          <div class="side-widget-header" style="color:var(--accent)">🔵 Updated</div>
+          <div class="side-widget-header" style="color:var(--emerald)">🟢 Updated</div>
           <div class="side-widget-body">
-            <div class="side-stat"><span class="label">ModernFix</span><span class="value" style="color:var(--accent);font-size:.75rem">5.27.6 → 5.27.8</span></div>
-            <div class="side-stat"><span class="label">Entity Model Features</span><span class="value" style="color:var(--accent);font-size:.75rem">3.0.17 → 3.1.1</span></div>
-            <div class="side-stat"><span class="label">Entity Texture Features</span><span class="value" style="color:var(--accent);font-size:.75rem">7.0.13 → 7.1</span></div>
+            <div class="side-stat"><span class="label">ModernFix</span><span class="value" style="color:var(--emerald);font-size:.75rem">5.26 → 5.27.6</span></div>
+            <div class="side-stat"><span class="label">Supplementaries</span><span class="value" style="color:var(--emerald);font-size:.75rem">3.1.42 → 3.1.43</span></div>
+            <div class="side-stat"><span class="label">Simple Voice Chat</span><span class="value" style="color:var(--emerald);font-size:.75rem">2.6.15 → 2.6.16</span></div>
+            <div class="side-stat"><span class="label">JEI</span><span class="value" style="color:var(--emerald);font-size:.75rem">.129 → .130</span></div>
           </div>
         </div>
       </div>
@@ -506,26 +386,26 @@
 
       <div id="performance">
         <div class="sub-heading">⚡ Performance &amp; Optimization</div>
-        <p class="wiki-p">Miracul212 prioritizes performance through a comprehensive optimization suite. <strong>Embeddium</strong> (Forge's Sodium port) rewrites the rendering engine, while <strong>Oculus</strong> enables efficient shader support. <strong>FerriteCore</strong> dramatically reduces memory usage, <strong>ModernFix 5.27.8</strong> speeds up startup and improves tick rates, <strong>Entity Culling</strong> skips off-screen entities, <strong>Noisium</strong> accelerates world generation, and <strong>Starlight</strong> provides a fully rewritten light engine.</p>
+        <p class="wiki-p">Miracul212 prioritizes performance through a comprehensive optimization suite. <strong>Embeddium</strong> (Forge's Sodium port) rewrites the rendering engine, while <strong>Oculus</strong> enables efficient shader support. <strong>FerriteCore</strong> dramatically reduces memory usage, <strong>ModernFix</strong> speeds up startup, <strong>Entity Culling</strong> skips off-screen entities, <strong>Noisium</strong> accelerates world generation, and <strong>Starlight</strong> provides a fully rewritten light engine.</p>
         <div style="margin:1rem 0">
           <div class="perf-bar"><div class="perf-label"><span>Rendering</span><span style="color:var(--emerald)">Very High</span></div><div class="perf-track"><div class="perf-fill" style="width:92%;background:var(--emerald)"></div></div></div>
           <div class="perf-bar"><div class="perf-label"><span>Memory</span><span style="color:var(--accent)">High</span></div><div class="perf-track"><div class="perf-fill" style="width:80%;background:var(--accent)"></div></div></div>
-          <div class="perf-bar"><div class="perf-label"><span>Load Speed</span><span style="color:var(--amethyst)">Excellent</span></div><div class="perf-track"><div class="perf-fill" style="width:87%;background:var(--amethyst)"></div></div></div>
-          <div class="perf-bar"><div class="perf-label"><span>Framerate</span><span style="color:var(--accent5)">Very Good</span></div><div class="perf-track"><div class="perf-fill" style="width:78%;background:var(--accent5)"></div></div></div>
+          <div class="perf-bar"><div class="perf-label"><span>Load Speed</span><span style="color:var(--amethyst)">Excellent</span></div><div class="perf-track"><div class="perf-fill" style="width:85%;background:var(--amethyst)"></div></div></div>
+          <div class="perf-bar"><div class="perf-label"><span>Framerate</span><span style="color:var(--accent5)">Very Good</span></div><div class="perf-track"><div class="perf-fill" style="width:75%;background:var(--accent5)"></div></div></div>
         </div>
       </div>
 
       <div id="visuals">
         <div class="sub-heading">🎨 Visuals &amp; Graphics</div>
-        <p class="wiki-p">Built around <strong>FreshAnimations</strong> and its multiple extensions, every entity gains smooth, detailed animations. <strong>Entity Model Features 3.1.1</strong> and <strong>Entity Texture Features 7.1</strong> (updated in v1.0.3) add variety to mob appearances. Ten curated shaders cover all hardware tiers — from lightweight <strong>BVS</strong> and <strong>Pixel Perfect</strong> to powerhouse <strong>BSL v10</strong> and <strong>Complementary Reimagined r5.7</strong>.</p>
+        <p class="wiki-p">Built around <strong>FreshAnimations</strong> and its multiple extensions, every entity in the game gains smooth, detailed animations. <strong>Entity Model Features</strong> and <strong>Entity Texture Features</strong> add variety to mob appearances. Ten curated shaders cover all hardware tiers — from lightweight <strong>BVS</strong> and <strong>Pixel Perfect</strong> to powerhouse <strong>BSL v10</strong> and <strong>Complementary Reimagined r5.7</strong>.</p>
       </div>
 
       <div id="content">
         <div class="sub-heading">🌍 Content &amp; Gameplay</div>
-        <p class="wiki-p"><strong>Alex's Mobs</strong> and <strong>Naturalist</strong> add hundreds of new creatures. <strong>Farmer's Delight</strong> brings an expanded farming and cooking system. <strong>Supplementaries</strong>, <strong>Another Furniture</strong>, and <strong>Handcrafted</strong> offer diverse decorative options. The exclusive <strong>nastias_miracle_stones_mod</strong> adds unique magical stones to the world.</p>
+        <p class="wiki-p"><strong>Alex's Mobs</strong> and <strong>Naturalist</strong> add hundreds of new creatures. <strong>Farmer's Delight</strong> brings an expanded farming and cooking system. <strong>Supplementaries</strong>, <strong>Another Furniture</strong>, and <strong>Handcrafted</strong> offer diverse decorative and building options. The exclusive <strong>nastias_miracle_stones_mod</strong> adds unique magical stones, extended by <strong>Unified Stones — Nastia's Extension</strong>.</p>
       </div>
 
-      <div class="notice info"><span class="notice-icon">ℹ️</span><div><strong>Essential</strong> (re-enabled in v1.0.3) adds skin customization and cosmetics. Combined with <strong>Simple Voice Chat</strong> and <strong>e4mc</strong>, the social experience is fully equipped — no dedicated server needed.</div></div>
+      <div class="notice info"><span class="notice-icon">ℹ️</span><div><strong>Simple Voice Chat</strong> enables proximity voice communication and <strong>e4mc</strong> allows LAN-over-internet multiplayer — no dedicated server required.</div></div>
     </div>
 
     <!-- MODS -->
@@ -590,92 +470,35 @@
     <!-- INSTALLATION -->
     <div class="wiki-section" id="install-section">
       <div class="section-heading"><span class="sh-icon sh-green">⬇️</span>Installation Guide</div>
-      <div class="notice tip"><span class="notice-icon">💡</span><div>The <strong>Modrinth App</strong> is the easiest and recommended installation method — it handles Forge, all 76 mod downloads, and settings automatically in a few clicks.</div></div>
+      <div class="notice tip"><span class="notice-icon">💡</span><div>The easiest method is the <strong>Modrinth App</strong> — it handles Forge, all mods, and settings automatically.</div></div>
 
-      <div class="sub-heading">🟢 Method 1 — Modrinth App (Recommended)</div>
-      <div class="install-steps">
-        <div class="install-step">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <div class="step-title">Download the Modrinth App</div>
-            <div class="step-desc">Visit <a href="https://modrinth.com/app" target="_blank">modrinth.com/app</a> and download the installer for your OS (Windows / macOS / Linux). Run it and complete the setup.</div>
-          </div>
-        </div>
-        <div class="install-step">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <div class="step-title">Import the Modpack File</div>
-            <div class="step-desc">Click <strong>"+"</strong> → <strong>"Import"</strong> in the app. Select your downloaded file:<br><span class="step-tag">Miracul212_1_0_3.mrpack</span></div>
-          </div>
-        </div>
-        <div class="install-step">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <div class="step-title">Automatic Download</div>
-            <div class="step-desc">The app automatically downloads all <strong>76 mods</strong> from Modrinth's CDN. This typically takes 2–5 minutes depending on your connection speed.</div>
-          </div>
-        </div>
-        <div class="install-step">
-          <div class="step-num">4</div>
-          <div class="step-body">
-            <div class="step-title">Allocate RAM &amp; Launch</div>
-            <div class="step-desc">Go to <strong>Instance Settings → Java</strong> and allocate at least <strong>6 GB RAM</strong> (8 GB recommended for shaders). Then click <strong>Play</strong>!</div>
-          </div>
-        </div>
-      </div>
+      <div class="sub-heading">Method 1: Modrinth App (Recommended)</div>
+      <p class="wiki-p">
+        1. Download and install the <strong>Modrinth App</strong> from <a href="https://modrinth.com/app" target="_blank">modrinth.com/app</a><br>
+        2. Open the app and click <strong>"Import"</strong><br>
+        3. Select <code style="background:var(--surface2);padding:.1rem .4rem;border-radius:4px;font-family:monospace;font-size:.85rem">Miracul212_1_0_2.mrpack</code><br>
+        4. Wait for all mods to download automatically<br>
+        5. Click <strong>"Play"</strong> — enjoy!
+      </p>
 
-      <div class="sub-heading">🔧 Method 2 — Manual Installation</div>
-      <div class="install-steps">
-        <div class="install-step">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <div class="step-title">Install Forge 1.20.1</div>
-            <div class="step-desc">Download and run the Forge 1.20.1 installer from <a href="https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html" target="_blank">files.minecraftforge.net</a>. Select <strong>"Install client"</strong> and confirm. Java 17+ is required.</div>
-          </div>
-        </div>
-        <div class="install-step">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <div class="step-title">Extract the .mrpack File</div>
-            <div class="step-desc">Rename <span class="step-tag">Miracul212_1_0_3.mrpack</span> to <span class="step-tag">.zip</span> and extract it. You will find a <span class="step-tag">modrinth.index.json</span> and an <span class="step-tag">overrides/</span> folder inside.</div>
-          </div>
-        </div>
-        <div class="install-step">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <div class="step-title">Copy Overrides to .minecraft</div>
-            <div class="step-desc">Copy all contents of <span class="step-tag">overrides/</span> into your <span class="step-tag">.minecraft</span> directory (<span class="step-tag">%appdata%\.minecraft</span> on Windows). This includes mods, shaders, configs, and options.</div>
-          </div>
-        </div>
-        <div class="install-step">
-          <div class="step-num">4</div>
-          <div class="step-body">
-            <div class="step-title">Download Mods from CDN</div>
-            <div class="step-desc">Open <span class="step-tag">modrinth.index.json</span> and download each mod from its <code style="font-family:monospace;font-size:.85em">"downloads"</code> URL. Place all <span class="step-tag">.jar</span> files in <span class="step-tag">.minecraft/mods/</span>.</div>
-          </div>
-        </div>
-        <div class="install-step">
-          <div class="step-num">5</div>
-          <div class="step-body">
-            <div class="step-title">Launch with Forge Profile</div>
-            <div class="step-desc">Open the Minecraft Launcher, select the <strong>Forge 1.20.1</strong> profile, allocate at least <strong>6 GB RAM</strong>, and click <strong>Play</strong>.</div>
-          </div>
-        </div>
-      </div>
+      <div class="sub-heading">Method 2: Manual</div>
+      <p class="wiki-p">
+        1. Install <strong>Forge 1.20.1</strong> from <a href="https://files.minecraftforge.net" target="_blank">files.minecraftforge.net</a><br>
+        2. Unzip the <code style="background:var(--surface2);padding:.1rem .4rem;border-radius:4px;font-family:monospace;font-size:.85rem">.mrpack</code> file (standard ZIP)<br>
+        3. Copy <code style="background:var(--surface2);padding:.1rem .4rem;border-radius:4px;font-family:monospace;font-size:.85rem">overrides/</code> contents into your <code style="background:var(--surface2);padding:.1rem .4rem;border-radius:4px;font-family:monospace;font-size:.85rem">.minecraft</code> folder<br>
+        4. Download mods from the URLs in <code style="background:var(--surface2);padding:.1rem .4rem;border-radius:4px;font-family:monospace;font-size:.85rem">modrinth.index.json</code>
+      </p>
 
       <div class="code-block">
-<span class="comment"># .mrpack archive structure (rename to .zip to open)</span>
-Miracul212_1_0_3.mrpack
-├── <span class="keyword">modrinth.index.json</span>   <span class="comment"># mod metadata &amp; Modrinth CDN URLs</span>
+<span class="comment"># .mrpack file structure</span>
+Miracul212_1_0_2.mrpack
+├── <span class="keyword">modrinth.index.json</span>   <span class="comment"># mod metadata &amp; CDN download URLs</span>
 └── overrides/
-    ├── mods/             <span class="comment"># pre-bundled .jar files</span>
-    ├── shaderpacks/      <span class="comment"># all 10 shader packs</span>
-    ├── resourcepacks/    <span class="comment"># all 10 resource packs</span>
-    ├── options.txt       <span class="comment"># pre-configured keybinds &amp; settings</span>
+    ├── mods/             <span class="comment"># bundled mods (included directly)</span>
+    ├── shaderpacks/      <span class="comment"># shader packs</span>
+    ├── options.txt       <span class="comment"># pre-configured game settings</span>
     └── fancymenu_data/   <span class="comment"># custom main menu</span>
       </div>
-
-      <div class="notice warning"><span class="notice-icon">⚠️</span><div><strong>Java Version:</strong> Requires <strong>Java 17 or newer</strong>. For best performance consider <a href="https://www.graalvm.org" target="_blank">GraalVM JDK 17</a> — it can noticeably improve startup time and in-game frame rates.</div></div>
     </div>
 
     <!-- REQUIREMENTS -->
@@ -699,42 +522,8 @@ Miracul212_1_0_3.mrpack
             <div class="side-stat"><span class="label">RAM</span><span class="value">8–10 GB allocated</span></div>
             <div class="side-stat"><span class="label">GPU</span><span class="value">RTX 2060 / RX 6600</span></div>
             <div class="side-stat"><span class="label">Storage</span><span class="value">5 GB free (SSD)</span></div>
-            <div class="side-stat"><span class="label">Java</span><span class="value">GraalVM JDK 17</span></div>
+            <div class="side-stat"><span class="label">Java</span><span class="value">Java 17+ (GraalVM)</span></div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- COMMENTS -->
-    <div class="wiki-section" id="comments-section">
-      <div class="comments-hdr">
-        <div class="comments-hdr-left">
-          <div class="section-heading"><span class="sh-icon sh-purple">💬</span>Community</div>
-          <span class="comment-count-badge" id="cmtBadge">0 comments</span>
-        </div>
-        <button class="write-btn" onclick="clickWrite()">✏️ Write a comment</button>
-      </div>
-
-      <!-- COMPOSER -->
-      <div class="composer" id="composer">
-        <div class="composer-top">
-          <div class="composer-av" id="composerAv"><span>👤</span></div>
-          <div>
-            <div class="composer-user" id="composerUser">Not signed in</div>
-            <div class="composer-sub">Sign in with Minecraft to comment</div>
-          </div>
-        </div>
-        <textarea class="composer-ta" id="cmtText" placeholder="Share your thoughts about the modpack…" maxlength="800"></textarea>
-        <div class="composer-actions">
-          <button class="btn-cxl" onclick="closeComposer()">Cancel</button>
-          <button class="btn-post" id="postBtn" onclick="postComment()" disabled>Post Comment</button>
-        </div>
-      </div>
-
-      <div class="comments-list" id="cmtList">
-        <div class="comments-empty" id="cmtEmpty">
-          <span class="ce-icon">💬</span>
-          <p>No comments yet. Be the first to share your experience!</p>
         </div>
       </div>
     </div>
@@ -758,7 +547,7 @@ Miracul212_1_0_3.mrpack
         <div class="side-stat"><span class="label">Resource Packs</span><span class="value" style="color:var(--accent5)">10</span></div>
         <div class="side-stat"><span class="label">Performance Mods</span><span class="value" style="color:var(--emerald)">15</span></div>
         <div class="side-stat"><span class="label">Content Mods</span><span class="value" style="color:var(--ruby)">12</span></div>
-        <div class="side-stat"><span class="label">Version</span><span class="value">1.0.3</span></div>
+        <div class="side-stat"><span class="label">Version</span><span class="value">1.0.2</span></div>
       </div>
     </div>
 
@@ -767,7 +556,7 @@ Miracul212_1_0_3.mrpack
       <div class="side-widget-body">
         <a class="quick-link" href="https://modrinth.com" target="_blank">🟢 Modrinth Platform</a>
         <a class="quick-link" href="https://modrinth.com/app" target="_blank">📱 Modrinth App</a>
-        <a class="quick-link" href="https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html" target="_blank">🔨 Forge 1.20.1</a>
+        <a class="quick-link" href="https://files.minecraftforge.net" target="_blank">🔨 Forge Downloads</a>
         <a class="quick-link" href="https://modrinth.com/mod/wiKMnwWH" target="_blank">💎 Nastia Miracle Stones</a>
         <a class="quick-link" href="https://modrinth.com/mod/sk9rgfiA" target="_blank">⚡ Embeddium</a>
         <a class="quick-link" href="https://modrinth.com/mod/uXXizFIs" target="_blank">🧠 FerriteCore</a>
@@ -786,7 +575,7 @@ Miracul212_1_0_3.mrpack
         <div class="side-stat"><span class="label">🌿 Farmer's Delight</span><span class="value" style="font-size:.7rem;color:var(--emerald)">content</span></div>
         <div class="side-stat"><span class="label">🎒 Traveler's Backpack</span><span class="value" style="font-size:.7rem;color:var(--accent5)">utility</span></div>
         <div class="side-stat"><span class="label">🎙️ Voice Chat</span><span class="value" style="font-size:.7rem;color:var(--ruby)">social</span></div>
-        <div class="side-stat"><span class="label">💫 Essential</span><span class="value" style="font-size:.7rem;color:var(--accent)">cosmetics</span></div>
+        <div class="side-stat"><span class="label">⚡ Embeddium</span><span class="value" style="font-size:.7rem;color:var(--accent)">performance</span></div>
       </div>
     </div>
 
@@ -799,119 +588,109 @@ Miracul212_1_0_3.mrpack
         <div class="side-stat"><span class="label">Loader</span><span class="value">Forge</span></div>
       </div>
     </div>
-
-    <!-- ACCOUNT WIDGET -->
-    <div class="side-widget">
-      <div class="side-widget-header">🎮 Your Account</div>
-      <div class="side-widget-body" id="sideAccBody">
-        <p style="font-size:.8rem;color:var(--text2);line-height:1.6;margin-bottom:.75rem">Sign in with your Minecraft username to leave comments.</p>
-        <button onclick="openModal()" style="width:100%;padding:.5rem;background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.25);border-radius:7px;color:var(--accent);font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer">🎮 Sign In</button>
-      </div>
-    </div>
   </aside>
 
 </div>
 
 <div class="wiki-footer">
-  <span>Miracul212 Wiki · Modpack Encyclopedia · v1.0.3 · Forge 1.20.1</span>
+  <span>Miracul212 Wiki · Modpack Encyclopedia · v1.0.2 · Forge 1.20.1</span>
   <div class="footer-links">
     <a href="https://modrinth.com" target="_blank">Modrinth</a>
     <a href="#mods-section">Mods</a>
     <a href="#shaders-section">Shaders</a>
     <a href="#install-section">Installation</a>
-    <a href="#comments-section">Community</a>
   </div>
 </div>
 
 <script>
-// ═══════════════════════════════════════════════
-// MOD DATA — v1.0.3 (PIDs from modrinth.index.json)
-// Essential & BetterF3 re-enabled
-// ModernFix 5.27.8 | EMF 3.1.1 | ETF 7.1
-// ═══════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
+// MOD DATA — all project IDs extracted directly from
+// modrinth.index.json CDN URLs in Miracul212_1_0_2.mrpack
+// Format: https://modrinth.com/mod/{pid}
+// ═══════════════════════════════════════════════════════
 const ALL_MODS = [
   // PERFORMANCE
-  {name:"Embeddium",               file:"embeddium-0.3.31+mc1.20.1.jar",                        type:"performance",icon:"🚀",pid:"sk9rgfiA"},
-  {name:"Oculus",                  file:"oculus-mc1.20.1-1.8.0.jar",                             type:"performance",icon:"👁️",pid:"GchcoXML"},
-  {name:"FerriteCore",             file:"ferritecore-6.0.1-forge.jar",                           type:"performance",icon:"🧠",pid:"uXXizFIs"},
-  {name:"ModernFix",               file:"modernfix-forge-5.27.8+mc1.20.1.jar",                   type:"performance",icon:"⚡",pid:"nmDcB62a"},
-  {name:"Entity Culling",          file:"entityculling-forge-1.10.1-mc1.20.1.jar",               type:"performance",icon:"⚡",pid:"NNAgCjsB"},
-  {name:"Noisium",                 file:"noisium-forge-2.3.0+mc1.20-1.20.1.jar",                 type:"performance",icon:"🌍",pid:"KuNKN7d2"},
-  {name:"Starlight",               file:"starlight-1.1.2+forge.1cda73c.jar",                     type:"performance",icon:"⭐",pid:"iRfIGC1s"},
-  {name:"BadOptimizations",        file:"BadOptimizations-2.4.1-1.20.1.jar",                     type:"performance",icon:"⚡",pid:"g96Z4WVZ"},
-  {name:"Dynamic FPS",             file:"dynamic-fps-3.11.4+minecraft-1.20.0-forge.jar",         type:"performance",icon:"🖥️",pid:"LQ3K71Q1"},
-  {name:"ImmediatelyFast",         file:"ImmediatelyFast-Forge-1.5.4+1.20.4.jar",                type:"performance",icon:"⚡",pid:"5ZwdcRci"},
-  {name:"Memory Leak Fix",         file:"memoryleakfix-forge-1.17+-1.1.5.jar",                   type:"performance",icon:"🧠",pid:"NRjRiSSD"},
-  {name:"RRLS",                    file:"rrls-4.0.6.1+mc1.20.1-forge.jar",                       type:"performance",icon:"⚡",pid:"ZP7xHXtw"},
-  {name:"Fastload Reforged",       file:"Fastload-Reforged-mc1.20.1-3.4.0.jar",                  type:"performance",icon:"🚀",pid:"kCpssoSb"},
-  {name:"Rubidium Extra",          file:"rubidium-extra-0.5.4.4+mc1.20.1-build.131.jar",         type:"performance",icon:"⚡",pid:"oY2B1pjg"},
-  {name:"GPU Tape",                file:"GPUTape-1.18x-1.21x-1.0.5.1.jar",                       type:"performance",icon:"🖥️",pid:"5CTSrY8X"},
-  // VISUAL — updated ETF 7.1 & EMF 3.1.1
-  {name:"Entity Texture Features", file:"entity_texture_features_1.20.1-forge-7.1.jar",          type:"visual",     icon:"🎨",pid:"BVzZfTc1"},
-  {name:"Entity Model Features",   file:"entity_model_features_1.20.1-forge-3.1.1.jar",          type:"visual",     icon:"🦊",pid:"4I1XuqiY"},
-  {name:"Skin Layers 3D",          file:"skinlayers3d-forge-1.11.1-mc1.20.1.jar",                type:"visual",     icon:"👤",pid:"zV5r3pPn"},
-  {name:"Prism",                   file:"Prism-1.20.1-forge-1.0.5.jar",                          type:"visual",     icon:"🌈",pid:"1OE8wbN0"},
-  {name:"Chat Animation",          file:"chatanimation-forge-1.20.1-1.1.3.jar",                  type:"visual",     icon:"💬",pid:"DnNYdJsx"},
-  {name:"Sound Physics Remastered",file:"sound-physics-remastered-forge-1.20.1-1.5.1.jar",      type:"visual",     icon:"🔊",pid:"qyVF9oeo"},
-  {name:"Chat Heads",              file:"chat_heads-0.15.1-forge-1.20.jar",                      type:"visual",     icon:"👤",pid:"Wb5oqrBJ"},
-  {name:"Photon",                  file:"photon-forge-1.20.1-1.1.17.jar",                        type:"visual",     icon:"💡",pid:"gzevkJbM"},
-  {name:"CIT Resewn",              file:"citresewn-1.2.2+1.20.1.jar",                            type:"visual",     icon:"🎨",pid:"otVJckYQ"},
+  {name:"Embeddium",               file:"embeddium-0.3.31+mc1.20.1.jar",                      type:"performance",icon:"🚀",pid:"sk9rgfiA"},
+  {name:"Oculus",                  file:"oculus-mc1.20.1-1.8.0.jar",                           type:"performance",icon:"👁️",pid:"GchcoXML"},
+  {name:"FerriteCore",             file:"ferritecore-6.0.1-forge.jar",                         type:"performance",icon:"🧠",pid:"uXXizFIs"},
+  {name:"ModernFix",               file:"modernfix-forge-5.27.6+mc1.20.1.jar",                 type:"performance",icon:"⚡",pid:"nmDcB62a"},
+  {name:"Entity Culling",          file:"entityculling-forge-1.10.1-mc1.20.1.jar",             type:"performance",icon:"⚡",pid:"NNAgCjsB"},
+  {name:"Noisium",                 file:"noisium-forge-2.3.0+mc1.20-1.20.1.jar",               type:"performance",icon:"🌍",pid:"KuNKN7d2"},
+  {name:"Starlight",               file:"starlight-1.1.2+forge.1cda73c.jar",                   type:"performance",icon:"⭐",pid:"iRfIGC1s"},
+  {name:"BadOptimizations",        file:"BadOptimizations-2.4.1-1.20.1.jar",                   type:"performance",icon:"⚡",pid:"g96Z4WVZ"},
+  {name:"Dynamic FPS",             file:"dynamic-fps-3.11.4+minecraft-1.20.0-forge.jar",       type:"performance",icon:"🖥️",pid:"LQ3K71Q1"},
+  {name:"ImmediatelyFast",         file:"ImmediatelyFast-Forge-1.5.4+1.20.4.jar",              type:"performance",icon:"⚡",pid:"5ZwdcRci"},
+  {name:"Memory Leak Fix",         file:"memoryleakfix-forge-1.17+-1.1.5.jar",                 type:"performance",icon:"🧠",pid:"NRjRiSSD"},
+  {name:"RRLS",                    file:"rrls-4.0.6.1+mc1.20.1-forge.jar",                     type:"performance",icon:"⚡",pid:"ZP7xHXtw"},
+  {name:"Fastload Reforged",       file:"Fastload-Reforged-mc1.20.1-3.4.0.jar",                type:"performance",icon:"🚀",pid:"kCpssoSb"},
+  {name:"Rubidium Extra",          file:"rubidium-extra-0.5.4.4+mc1.20.1-build.131.jar",       type:"performance",icon:"⚡",pid:"oY2B1pjg"},
+  {name:"GPU Tape",                file:"GPUTape-1.18x-1.21x-1.0.5.1.jar",                     type:"performance",icon:"🖥️",pid:"5CTSrY8X"},
+  // VISUAL
+  {name:"Entity Texture Features", file:"entity_texture_features_1.20.1-forge-7.0.13.jar",    type:"visual",     icon:"🎨",pid:"BVzZfTc1"},
+  {name:"Entity Model Features",   file:"entity_model_features_1.20.1-forge-3.0.17.jar",       type:"visual",     icon:"🦊",pid:"4I1XuqiY"},
+  {name:"Skin Layers 3D",          file:"skinlayers3d-forge-1.11.1-mc1.20.1.jar",              type:"visual",     icon:"👤",pid:"zV5r3pPn"},
+  {name:"Prism",                   file:"Prism-1.20.1-forge-1.0.5.jar",                        type:"visual",     icon:"🌈",pid:"1OE8wbN0"},
+  {name:"Chat Animation",          file:"chatanimation-forge-1.20.1-1.1.3.jar",                type:"visual",     icon:"💬",pid:"DnNYdJsx"},
+  {name:"Sound Physics Remastered",file:"sound-physics-remastered-forge-1.20.1-1.5.1.jar",    type:"visual",     icon:"🔊",pid:"qyVF9oeo"},
+  {name:"Chat Heads",              file:"chat_heads-0.15.1-forge-1.20.jar",                    type:"visual",     icon:"👤",pid:"Wb5oqrBJ"},
+  {name:"Photon",                  file:"photon-forge-1.20.1-1.1.17.jar",                      type:"visual",     icon:"💡",pid:"gzevkJbM"},
+  {name:"CIT Resewn",              file:"citresewn-1.2.2+1.20.1.jar",                          type:"visual",     icon:"🎨",pid:"otVJckYQ"},
   // CONTENT
-  {name:"Nastia's Miracle Stones", file:"nastias_miracle_stones_mod-1.7.0_Peacock_Release.jar",  type:"content",    icon:"💎",pid:"wiKMnwWH"},
-  {name:"Alex's Mobs",             file:"alexsmobs-1.22.9.jar",                                  type:"content",    icon:"🦁",pid:"2cMuAZAp"},
-  {name:"Naturalist",              file:"naturalist-5.0pre3+forge-1.20.1.jar",                   type:"content",    icon:"🦊",pid:"F8BQNPWX"},
-  {name:"Farmer's Delight",        file:"FarmersDelight-1.20.1-1.2.11.jar",                      type:"content",    icon:"🌾",pid:"R2OftAxM"},
-  {name:"Supplementaries",         file:"supplementaries-1.20-3.1.43-forge.jar",                 type:"content",    icon:"🏮",pid:"fFEIiSDQ"},
-  {name:"Another Furniture",       file:"another_furniture-forge-1.20.1-3.0.4.jar",              type:"content",    icon:"🛋️",pid:"ulloLmqG"},
-  {name:"Handcrafted",             file:"handcrafted-forge-1.20.1-3.0.6.jar",                    type:"content",    icon:"🪑",pid:"pJmCFF0p"},
-  {name:"Traveler's Backpack",     file:"travelersbackpack-forge-1.20.1-9.1.53.jar",             type:"content",    icon:"🎒",pid:"rlloIFEV"},
-  {name:"Exposure",                file:"exposure-forge-1.20.1-1.9.20.jar",                      type:"content",    icon:"📸",pid:"hB899VmG"},
-  {name:"Exposure Polaroid",       file:"exposure_polaroid-forge-1.20.1-1.1.3.jar",              type:"content",    icon:"📷",pid:"WEWiqYkW"},
-  // UTILITY — Essential & BetterF3 re-enabled (no disabled flag)
-  {name:"JEI (Just Enough Items)", file:"jei-1.20.1-forge-15.20.0.130.jar",                     type:"utility",    icon:"📖",pid:"u6dRKJwZ"},
-  {name:"Jade",                    file:"Jade-1.20.1-Forge-11.13.2.jar",                         type:"utility",    icon:"🔍",pid:"nvQzSEkH"},
-  {name:"Xaero's Minimap",         file:"xaerominimap-forge-1.20.1-25.3.10.jar",                 type:"utility",    icon:"🗺️",pid:"1bokaNcj"},
-  {name:"Xaero's World Map",       file:"xaeroworldmap-forge-1.20.1-1.40.11.jar",                type:"utility",    icon:"🌐",pid:"NcUtCpym"},
-  {name:"Simple Voice Chat",       file:"voicechat-forge-1.20.1-2.6.16.jar",                    type:"utility",    icon:"🎙️",pid:"9eGKb6K1"},
-  {name:"e4mc",                    file:"e4mc-forge-6.1.0.jar",                                  type:"utility",    icon:"🌐",pid:"qANg5Jrr"},
-  {name:"AppleSkin",               file:"appleskin-forge-mc1.20.1-2.5.1.jar",                    type:"utility",    icon:"🍎",pid:"EsAfCjCV"},
-  {name:"Vein Miner",              file:"veinminer-1.1.0.jar",                                   type:"utility",    icon:"⛏️",pid:"OhduvhIc"},
-  {name:"Mouse Tweaks",            file:"MouseTweaks-forge-mc1.20.1-2.25.1.jar",                 type:"utility",    icon:"🖱️",pid:"aC3cM3Vq"},
-  {name:"Shulker Box Tooltip",     file:"shulkerboxtooltip-forge-4.0.4+1.20.1.jar",              type:"utility",    icon:"📦",pid:"2M01OLQq"},
-  {name:"Carry On",                file:"carryon-forge-1.20.1-2.1.2.7.jar",                      type:"utility",    icon:"📦",pid:"joEfVgkn"},
-  {name:"WI Zoom",                 file:"WI-Zoom-1.5-MC1.20.1-Forge.jar",                        type:"utility",    icon:"🔍",pid:"o7DitHWP"},
-  {name:"Do a Barrel Roll",        file:"do_a_barrel_roll-forge-3.5.6+1.20.1.jar",               type:"utility",    icon:"🛩️",pid:"6FtRfnLg"},
-  {name:"Freecam",                 file:"freecam-forge-1.2.1+1.20.jar",                          type:"utility",    icon:"📷",pid:"XeEZ3fK2"},
-  {name:"Spark",                   file:"spark-1.10.53-forge.jar",                               type:"utility",    icon:"🔥",pid:"l6YH9Als"},
-  {name:"FancyMenu",               file:"fancymenu_forge_3.8.1_MC_1.20.1.jar",                   type:"utility",    icon:"✨",pid:"Wq5SjeWM"},
-  {name:"CraftPresence",           file:"CraftPresence-2.7.1+1.20.1-forge.jar",                  type:"utility",    icon:"🎮",pid:"DFqQfIBR"},
-  {name:"Clumps",                  file:"Clumps-forge-1.20.1-12.0.0.4.jar",                      type:"utility",    icon:"🧲",pid:"Wnxd13zP"},
-  {name:"Sit",                     file:"sit-1.20.1-1.3.5.jar",                                  type:"utility",    icon:"🪑",pid:"VKXzIykF"},
-  {name:"Showcase Item",           file:"showcaseitem-1.20.1-1.2.jar",                           type:"utility",    icon:"🖼️",pid:"P5Jjjezm"},
-  {name:"Watut",                   file:"watut-forge-1.20.1-1.2.3.jar",                          type:"utility",    icon:"🌊",pid:"AtB5mHky"},
-  {name:"Skin Restorer",           file:"skinrestorer-2.7.0+1.20-forge.jar",                     type:"utility",    icon:"🎭",pid:"ghrZDhGW"},
-  {name:"Self Expression",         file:"selfexpression-2.22a-forge-1.20.1.jar",                 type:"utility",    icon:"🎭",pid:"yv3OK08E"},
-  {name:"Better Third Person",     file:"BetterThirdPerson-Forge-1.20-1.9.0.jar",                type:"utility",    icon:"📹",pid:"G1s2WpNo"},
-  {name:"Melody",                  file:"melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",              type:"utility",    icon:"🎵",pid:"CVT4pFB2"},
-  {name:"Kleider's Custom Renderer",file:"kleiders_custom_renderer-7.4.1-forge-1.20.1.jar",     type:"utility",    icon:"👗",pid:"oaG6aa1j"},
-  {name:"BetterF3",                file:"BetterF3-7.0.2-Forge-1.20.1.jar",                      type:"utility",    icon:"🔧",pid:"8shC1gFX"},
-  {name:"Essential",               file:"Essential_1-3-10-8_forge_1-20-1.jar",                   type:"utility",    icon:"💫",pid:"k2ZPuTBm"},
+  {name:"Nastia's Miracle Stones", file:"nastias_miracle_stones_mod-1.7.0_Peacock_Release.jar",type:"content",   icon:"💎",pid:"wiKMnwWH"},
+  {name:"Alex's Mobs",             file:"alexsmobs-1.22.9.jar",                                type:"content",    icon:"🦁",pid:"2cMuAZAp"},
+  {name:"Naturalist",              file:"naturalist-5.0pre3+forge-1.20.1.jar",                  type:"content",   icon:"🦊",pid:"F8BQNPWX"},
+  {name:"Farmer's Delight",        file:"FarmersDelight-1.20.1-1.2.11.jar",                    type:"content",    icon:"🌾",pid:"R2OftAxM"},
+  {name:"Supplementaries",         file:"supplementaries-1.20-3.1.43-forge.jar",               type:"content",    icon:"🏮",pid:"fFEIiSDQ"},
+  {name:"Another Furniture",       file:"another_furniture-forge-1.20.1-3.0.4.jar",            type:"content",    icon:"🛋️",pid:"ulloLmqG"},
+  {name:"Handcrafted",             file:"handcrafted-forge-1.20.1-3.0.6.jar",                  type:"content",    icon:"🪑",pid:"pJmCFF0p"},
+  {name:"Traveler's Backpack",     file:"travelersbackpack-forge-1.20.1-9.1.53.jar",           type:"content",    icon:"🎒",pid:"rlloIFEV"},
+  {name:"Exposure",                file:"exposure-forge-1.20.1-1.9.20.jar",                    type:"content",    icon:"📸",pid:"hB899VmG"},
+  {name:"Exposure Polaroid",       file:"exposure_polaroid-forge-1.20.1-1.1.3.jar",            type:"content",    icon:"📷",pid:"WEWiqYkW"},
+  // UTILITY
+  {name:"JEI (Just Enough Items)", file:"jei-1.20.1-forge-15.20.0.130.jar",                   type:"utility",    icon:"📖",pid:"u6dRKJwZ"},
+  {name:"Jade",                    file:"Jade-1.20.1-Forge-11.13.2.jar",                       type:"utility",    icon:"🔍",pid:"nvQzSEkH"},
+  {name:"Xaero's Minimap",         file:"xaerominimap-forge-1.20.1-25.3.10.jar",               type:"utility",    icon:"🗺️",pid:"1bokaNcj"},
+  {name:"Xaero's World Map",       file:"xaeroworldmap-forge-1.20.1-1.40.11.jar",              type:"utility",    icon:"🌐",pid:"NcUtCpym"},
+  {name:"Simple Voice Chat",       file:"voicechat-forge-1.20.1-2.6.16.jar",                  type:"utility",    icon:"🎙️",pid:"9eGKb6K1"},
+  {name:"e4mc",                    file:"e4mc-forge-6.1.0.jar",                                type:"utility",    icon:"🌐",pid:"qANg5Jrr"},
+  {name:"AppleSkin",               file:"appleskin-forge-mc1.20.1-2.5.1.jar",                  type:"utility",   icon:"🍎",pid:"EsAfCjCV"},
+  {name:"Vein Miner",              file:"veinminer-1.1.0.jar",                                 type:"utility",    icon:"⛏️",pid:"OhduvhIc"},
+  {name:"Mouse Tweaks",            file:"MouseTweaks-forge-mc1.20.1-2.25.1.jar",               type:"utility",    icon:"🖱️",pid:"aC3cM3Vq"},
+  {name:"Shulker Box Tooltip",     file:"shulkerboxtooltip-forge-4.0.4+1.20.1.jar",            type:"utility",    icon:"📦",pid:"2M01OLQq"},
+  {name:"Carry On",                file:"carryon-forge-1.20.1-2.1.2.7.jar",                    type:"utility",    icon:"📦",pid:"joEfVgkn"},
+  {name:"WI Zoom",                 file:"WI-Zoom-1.5-MC1.20.1-Forge.jar",                      type:"utility",    icon:"🔍",pid:"o7DitHWP"},
+  {name:"Do a Barrel Roll",        file:"do_a_barrel_roll-forge-3.5.6+1.20.1.jar",             type:"utility",    icon:"🛩️",pid:"6FtRfnLg"},
+  {name:"Freecam",                 file:"freecam-forge-1.2.1+1.20.jar",                        type:"utility",    icon:"📷",pid:"XeEZ3fK2"},
+  {name:"Spark",                   file:"spark-1.10.53-forge.jar",                             type:"utility",    icon:"🔥",pid:"l6YH9Als"},
+  {name:"FancyMenu",               file:"fancymenu_forge_3.8.1_MC_1.20.1.jar",                 type:"utility",    icon:"✨",pid:"Wq5SjeWM"},
+  {name:"CraftPresence",           file:"CraftPresence-2.7.1+1.20.1-forge.jar",                type:"utility",    icon:"🎮",pid:"DFqQfIBR"},
+  {name:"Clumps",                  file:"Clumps-forge-1.20.1-12.0.0.4.jar",                    type:"utility",    icon:"🧲",pid:"Wnxd13zP"},
+  {name:"Sit",                     file:"sit-1.20.1-1.3.5.jar",                                type:"utility",    icon:"🪑",pid:"VKXzIykF"},
+  {name:"Showcase Item",           file:"showcaseitem-1.20.1-1.2.jar",                         type:"utility",    icon:"🖼️",pid:"P5Jjjezm"},
+  {name:"Watut",                   file:"watut-forge-1.20.1-1.2.3.jar",                        type:"utility",    icon:"🌊",pid:"AtB5mHky"},
+  {name:"Skin Restorer",           file:"skinrestorer-2.7.0+1.20-forge.jar",                   type:"utility",    icon:"🎭",pid:"ghrZDhGW"},
+  {name:"Self Expression",         file:"selfexpression-2.22a-forge-1.20.1.jar",               type:"utility",    icon:"🎭",pid:"yv3OK08E"},
+  {name:"Better Third Person",     file:"BetterThirdPerson-Forge-1.20-1.9.0.jar",              type:"utility",    icon:"📹",pid:"G1s2WpNo"},
+  {name:"Melody",                  file:"melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",            type:"utility",    icon:"🎵",pid:"CVT4pFB2"},
+  {name:"Kleider's Custom Renderer",file:"kleiders_custom_renderer-7.4.1-forge-1.20.1.jar",   type:"utility",    icon:"👗",pid:"oaG6aa1j"},
+  {name:"BetterF3",                file:"BetterF3-7.0.2-Forge-1.20.1.jar",                    type:"utility",    icon:"🔧",pid:"8shC1gFX",disabled:true},
+  {name:"Essential",               file:"Essential_1-3-10-8_forge_1-20-1.jar",                 type:"utility",    icon:"💫",pid:"k2ZPuTBm",disabled:true},
   // LIBRARIES
-  {name:"UniLib",                  file:"UniLib-1.2.1+1.20.1-forge.jar",                         type:"library",    icon:"📦",pid:"nT86WUER"},
-  {name:"Architectury",            file:"architectury-9.2.14-forge.jar",                         type:"library",    icon:"📦",pid:"lhGA9TYQ"},
-  {name:"GeckoLib",                file:"geckolib-forge-1.20.1-4.8.3.jar",                       type:"library",    icon:"🦎",pid:"8BmcQJ2H"},
-  {name:"Resourceful Lib",         file:"resourcefullib-forge-1.20.1-2.1.29.jar",                type:"library",    icon:"📦",pid:"G1hIVOrD"},
-  {name:"Cloth Config",            file:"cloth-config-11.1.136-forge.jar",                       type:"library",    icon:"📦",pid:"9s6osm5g"},
-  {name:"Kotlin for Forge",        file:"kotlinforforge-4.12.0-all.jar",                         type:"library",    icon:"📦",pid:"ordsPcFz"},
-  {name:"Citadel",                 file:"citadel-2.6.3-1.20.1.jar",                             type:"library",    icon:"📦",pid:"jJfV67b1"},
-  {name:"Konkrete",                file:"konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",               type:"library",    icon:"📦",pid:"J81TRJWm"},
-  {name:"MRU",                     file:"MRU-1.0.4+1.20.1+forge.jar",                           type:"library",    icon:"📦",pid:"SNVQ2c0g"},
-  {name:"CoroUtil",                file:"coroutil-forge-1.20.1-1.3.7.jar",                       type:"library",    icon:"📦",pid:"rLLJ1OZM"},
-  {name:"Iceberg",                 file:"Iceberg-1.20.1-forge-1.1.25.jar",                      type:"library",    icon:"📦",pid:"5faXoLqX"},
-  {name:"Moonlight Lib",           file:"moonlight-1.20-2.16.28-forge.jar",                      type:"library",    icon:"🌙",pid:"twkfQtEc"},
-  {name:"Curios API",              file:"curios-forge-5.14.1+1.20.1.jar",                        type:"library",    icon:"💍",pid:"vvuO3ImH"},
-  {name:"Fabric API (Connector)",  file:"fabric-api-0.92.6+1.11.14+1.20.1.jar",                 type:"library",    icon:"📦",pid:"Aqlf1Shp"},
-  {name:"Sounds",                  file:"Sounds-2.2.1+1.20.1+forge.jar",                        type:"library",    icon:"🔊",pid:"ZouiUX7t"},
+  {name:"UniLib",                  file:"UniLib-1.2.1+1.20.1-forge.jar",                       type:"library",    icon:"📦",pid:"nT86WUER"},
+  {name:"Architectury",            file:"architectury-9.2.14-forge.jar",                       type:"library",    icon:"📦",pid:"lhGA9TYQ"},
+  {name:"GeckoLib",                file:"geckolib-forge-1.20.1-4.8.3.jar",                     type:"library",    icon:"🦎",pid:"8BmcQJ2H"},
+  {name:"Resourceful Lib",         file:"resourcefullib-forge-1.20.1-2.1.29.jar",              type:"library",    icon:"📦",pid:"G1hIVOrD"},
+  {name:"Cloth Config",            file:"cloth-config-11.1.136-forge.jar",                     type:"library",    icon:"📦",pid:"9s6osm5g"},
+  {name:"Kotlin for Forge",        file:"kotlinforforge-4.12.0-all.jar",                       type:"library",    icon:"📦",pid:"ordsPcFz"},
+  {name:"Citadel",                 file:"citadel-2.6.3-1.20.1.jar",                           type:"library",    icon:"📦",pid:"jJfV67b1"},
+  {name:"Konkrete",                file:"konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",             type:"library",    icon:"📦",pid:"J81TRJWm"},
+  {name:"MRU",                     file:"MRU-1.0.4+1.20.1+forge.jar",                         type:"library",    icon:"📦",pid:"SNVQ2c0g"},
+  {name:"CoroUtil",                file:"coroutil-forge-1.20.1-1.3.7.jar",                     type:"library",    icon:"📦",pid:"rLLJ1OZM"},
+  {name:"Iceberg",                 file:"Iceberg-1.20.1-forge-1.1.25.jar",                    type:"library",    icon:"📦",pid:"5faXoLqX"},
+  {name:"Moonlight Lib",           file:"moonlight-1.20-2.16.28-forge.jar",                    type:"library",    icon:"🌙",pid:"twkfQtEc"},
+  {name:"Curios API",              file:"curios-forge-5.14.1+1.20.1.jar",                      type:"library",    icon:"💍",pid:"vvuO3ImH"},
+  {name:"Fabric API (Connector)",  file:"fabric-api-0.92.6+1.11.14+1.20.1.jar",               type:"library",    icon:"📦",pid:"Aqlf1Shp"},
+  {name:"Sounds",                  file:"Sounds-2.2.1+1.20.1+forge.jar",                      type:"library",    icon:"🔊",pid:"ZouiUX7t"},
 ];
 
 const SHADERS = [
@@ -940,224 +719,146 @@ const RESOURCE_PACKS = [
   {name:"Qrafty's Capitalized Font",      file:"qrafty's-capitalized-font-3.1.zip",               icon:"🔤",desc:"Improved uppercase font for clearer in-game text."},
 ];
 
-// ═══ TABLE STATE ═══
-let currentPage=1, PAGE_SIZE=20, currentTab='all', filteredMods=[...ALL_MODS], sortDir=1, sortKey='name';
-const TYPE_CFG={performance:{label:'Performance',css:'tag-performance'},visual:{label:'Visual',css:'tag-visual'},content:{label:'Content',css:'tag-content'},utility:{label:'Utility',css:'tag-utility'},library:{label:'Library',css:'tag-library'}};
+// STATE
+let currentPage = 1;
+const PAGE_SIZE = 20;
+let currentTab = 'all';
+let filteredMods = [...ALL_MODS];
+let sortDir = 1, sortKey = 'name';
 
-window.onload=()=>{
-  buildShaderGrid(); buildRPGrid(); filterMods(); setupScrollSpy();
-  setTimeout(()=>{document.querySelectorAll('.perf-fill').forEach(b=>{const w=b.style.width;b.style.width='0';setTimeout(()=>{b.style.width=w;},100);});},200);
-  loadComments(); updateAccountUI();
+const TYPE_CFG = {
+  performance:{label:'Performance',css:'tag-performance'},
+  visual:     {label:'Visual',     css:'tag-visual'},
+  content:    {label:'Content',    css:'tag-content'},
+  utility:    {label:'Utility',    css:'tag-utility'},
+  library:    {label:'Library',    css:'tag-library'},
 };
 
-function switchTab(tab){
-  currentTab=tab;currentPage=1;
-  const tabs=['all','performance','visual','content','utility','library'];
-  document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',tabs[i]===tab));
+window.onload = () => {
+  buildShaderGrid();
+  buildRPGrid();
+  filterMods();
+  setupScrollSpy();
+  setTimeout(() => {
+    document.querySelectorAll('.perf-fill').forEach(b => {
+      const w = b.style.width; b.style.width = '0';
+      setTimeout(() => { b.style.width = w; }, 100);
+    });
+  }, 200);
+};
+
+function switchTab(tab) {
+  currentTab = tab; currentPage = 1;
+  const tabs = ['all','performance','visual','content','utility','library'];
+  document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active', tabs[i] === tab));
   filterMods();
 }
-function filterMods(){
-  const q=document.getElementById('modSearch').value.toLowerCase();
-  filteredMods=ALL_MODS.filter(m=>(currentTab==='all'||m.type===currentTab)&&(!q||m.name.toLowerCase().includes(q)||m.file.toLowerCase().includes(q)));
-  if(sortKey)filteredMods.sort((a,b)=>(a[sortKey]||'').localeCompare(b[sortKey]||'')*sortDir);
-  currentPage=1;renderMods();
+
+function filterMods() {
+  const q = document.getElementById('modSearch').value.toLowerCase();
+  filteredMods = ALL_MODS.filter(m => {
+    const ok1 = currentTab === 'all' || m.type === currentTab;
+    const ok2 = !q || m.name.toLowerCase().includes(q) || m.file.toLowerCase().includes(q);
+    return ok1 && ok2;
+  });
+  if (sortKey) filteredMods.sort((a,b) => (a[sortKey]||'').localeCompare(b[sortKey]||'') * sortDir);
+  currentPage = 1;
+  renderMods();
 }
-function sortMods(key){if(sortKey===key)sortDir*=-1;else{sortKey=key;sortDir=1;}filterMods();}
-function renderMods(){
-  const total=filteredMods.length,pages=Math.ceil(total/PAGE_SIZE),start=(currentPage-1)*PAGE_SIZE;
-  document.getElementById('modTableBody').innerHTML=filteredMods.slice(start,start+PAGE_SIZE).map(m=>{
-    const tc=TYPE_CFG[m.type]||{label:m.type,css:'tag-utility'};
-    const url=m.pid?`https://modrinth.com/mod/${m.pid}`:null;
+
+function sortMods(key) {
+  if (sortKey === key) sortDir *= -1; else { sortKey = key; sortDir = 1; }
+  filterMods();
+}
+
+function renderMods() {
+  const total = filteredMods.length;
+  const pages = Math.ceil(total / PAGE_SIZE);
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const slice = filteredMods.slice(start, start + PAGE_SIZE);
+
+  document.getElementById('modTableBody').innerHTML = slice.map(m => {
+    const tc = TYPE_CFG[m.type] || {label:m.type,css:'tag-utility'};
+    const url = m.pid ? `https://modrinth.com/mod/${m.pid}` : null;
     return `<tr class="mod-row">
       <td><div class="mod-name-cell"><div class="mod-icon">${m.icon}</div><div><div class="mod-title">${m.name}</div></div></div></td>
-      <td><span class="type-tag ${tc.css}">${tc.label}</span></td>
+      <td><span class="type-tag ${m.disabled?'tag-disabled':tc.css}">${m.disabled?'Disabled':tc.label}</span></td>
       <td><div class="mod-filename" title="${m.file}">${m.file}</div></td>
       <td>${url?`<a class="dl-btn" href="${url}" target="_blank">↗ Modrinth</a>`:'<span style="color:var(--text3);font-size:.75rem">—</span>'}</td>
     </tr>`;
   }).join('');
-  document.getElementById('pageInfo').textContent=`Showing ${start+1}–${Math.min(start+PAGE_SIZE,total)} of ${total}`;
+
+  document.getElementById('pageInfo').textContent = `Showing ${start+1}–${Math.min(start+PAGE_SIZE,total)} of ${total}`;
   renderPagination(pages);
 }
-function renderPagination(pages){
-  const el=document.getElementById('pagination');
-  if(pages<=1){el.innerHTML='';return;}
-  let h=`<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''}>‹</button>`;
-  for(let i=1;i<=pages;i++){
-    if(pages>7&&i>2&&i<pages-1&&Math.abs(i-currentPage)>1){if(i===3||i===pages-2)h+=`<span style="color:var(--text3);padding:0 .3rem">…</span>`;continue;}
-    h+=`<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
-  }
-  h+=`<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===pages?'disabled':''}>›</button>`;
-  el.innerHTML=h;
-}
-function goPage(p){const pages=Math.ceil(filteredMods.length/PAGE_SIZE);if(p<1||p>pages)return;currentPage=p;renderMods();document.getElementById('mods-section').scrollIntoView({behavior:'smooth',block:'start'});}
-function buildShaderGrid(){
-  const lc={'High-End':'var(--ruby)','Mid-Range':'var(--accent5)','Lightweight':'var(--emerald)','Tex Pack':'var(--amethyst)'};
-  document.getElementById('shaderGrid').innerHTML=SHADERS.map(s=>`<div class="shader-card"><div class="shader-thumb" style="--c1:${s.c1};--c2:${s.c2}"><span>${s.emoji}</span></div><div class="shader-body"><div class="shader-name">${s.name}</div><div class="shader-ver">${s.file}</div><div style="margin-top:.4rem"><span class="type-tag" style="background:rgba(0,0,0,.2);color:${lc[s.level]};border:1px solid ${lc[s.level]}40">${s.level}</span></div></div></div>`).join('');
-}
-function buildRPGrid(){
-  document.getElementById('rpGrid').innerHTML=RESOURCE_PACKS.map(r=>`<div class="rp-card"><div class="rp-icon">${r.icon}</div><div><div class="rp-name">${r.name}</div><div class="rp-desc">${r.desc}</div><div style="margin-top:.3rem;font-size:.7rem;color:var(--text3);font-family:monospace">${r.file}</div></div></div>`).join('');
-}
-function handleGlobalSearch(q){if(!q)return;document.getElementById('modSearch').value=q;filterMods();document.getElementById('mods-section').scrollIntoView({behavior:'smooth'});}
-function setupScrollSpy(){
-  const ids=['overview','changelog','features','mods-section','shaders-section','rp-section','install-section','requirements','comments-section','credits'];
-  const links=document.querySelectorAll('.toc-item a');
-  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const m=document.querySelector(`.toc-item a[href="#${e.target.id}"]`);if(m)m.classList.add('active');}});},{rootMargin:'-25% 0px -65% 0px'});
-  ids.forEach(id=>{const el=document.getElementById(id);if(el)obs.observe(el);});
-}
 
-// ═══════════════════════════════════════
-// ACCOUNT / LOGIN SYSTEM
-// Minecraft username → Crafatar avatar
-// ═══════════════════════════════════════
-let currentUser=null;
-let debTimer=null;
-
-function openModal(){document.getElementById('loginModal').classList.add('open');setTimeout(()=>document.getElementById('mcInput').focus(),80);}
-function closeModal(){
-  document.getElementById('loginModal').classList.remove('open');
-  document.getElementById('loginErr').style.display='none';
-  document.getElementById('loginLoad').style.display='none';
-  document.getElementById('mcPreview').classList.remove('show');
-  document.getElementById('mcInput').value='';
-  document.getElementById('loginBtn').disabled=false;
-}
-
-function onMcInput(val){
-  clearTimeout(debTimer);
-  document.getElementById('mcPreview').classList.remove('show');
-  document.getElementById('loginErr').style.display='none';
-  if(val.length<2)return;
-  debTimer=setTimeout(()=>{
-    const av=`https://crafatar.com/avatars/${encodeURIComponent(val)}?size=36&default=MHF_Steve&overlay`;
-    document.getElementById('mcPreviewImg').src=av;
-    document.getElementById('mcPreviewName').textContent=val;
-    document.getElementById('mcPreview').classList.add('show');
-  },500);
-}
-
-async function doLogin(){
-  const name=document.getElementById('mcInput').value.trim();
-  if(!name||name.length<2)return;
-  const err=document.getElementById('loginErr');
-  const load=document.getElementById('loginLoad');
-  const btn=document.getElementById('loginBtn');
-  err.style.display='none'; load.style.display='block'; btn.disabled=true;
-  try{
-    // Attempt Mojang API via CORS proxy
-    const res=await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://api.mojang.com/users/profiles/minecraft/'+name)}`);
-    const data=await res.json();
-    const profile=JSON.parse(data.contents);
-    if(!profile||!profile.id)throw new Error('not found');
-    const uuid=profile.id;
-    const displayName=profile.name;
-    const avatarUrl=`https://crafatar.com/avatars/${uuid}?size=64&default=MHF_Steve&overlay`;
-    currentUser={username:displayName,uuid,avatarUrl};
-  }catch(e){
-    // Fallback: accept the username offline (no Mojang verification)
-    if(name.length>=2&&name.length<=16&&/^[a-zA-Z0-9_]+$/.test(name)){
-      currentUser={username:name,uuid:null,avatarUrl:`https://crafatar.com/avatars/${encodeURIComponent(name)}?size=64&default=MHF_Steve&overlay`};
-    }else{
-      load.style.display='none'; btn.disabled=false; err.style.display='block'; return;
+function renderPagination(pages) {
+  const el = document.getElementById('pagination');
+  if (pages <= 1) { el.innerHTML = ''; return; }
+  let h = `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''}>‹</button>`;
+  for (let i = 1; i <= pages; i++) {
+    if (pages > 7 && i > 2 && i < pages-1 && Math.abs(i-currentPage) > 1) {
+      if (i===3||i===pages-2) h += `<span style="color:var(--text3);padding:0 .3rem">…</span>`;
+      continue;
     }
+    h += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
   }
-  load.style.display='none'; btn.disabled=false;
-  closeModal(); updateAccountUI();
-  openComposer();
-  document.getElementById('comments-section').scrollIntoView({behavior:'smooth'});
+  h += `<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===pages?'disabled':''}>›</button>`;
+  el.innerHTML = h;
 }
 
-function updateAccountUI(){
-  const haAvatar=document.getElementById('haAvatar');
-  const haLabel=document.getElementById('haLabel');
-  const sideBody=document.getElementById('sideAccBody');
-  if(currentUser){
-    haAvatar.innerHTML=`<img src="${currentUser.avatarUrl}" alt="${currentUser.username}">`;
-    haLabel.textContent=currentUser.username; haLabel.className='ha-label signed';
-    // composer
-    document.getElementById('composerAv').innerHTML=`<img src="${currentUser.avatarUrl}" alt="${currentUser.username}">`;
-    document.getElementById('composerUser').textContent=currentUser.username;
-    document.getElementById('postBtn').disabled=false;
-    // sidebar
-    sideBody.innerHTML=`
-      <div style="display:flex;align-items:center;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--wiki-line);margin-bottom:.6rem">
-        <img src="${currentUser.avatarUrl}" style="width:36px;height:36px;border-radius:6px;border:1px solid var(--border);image-rendering:pixelated" alt="">
-        <div><div style="font-weight:700;font-size:.85rem;color:var(--text)">${currentUser.username}</div><div style="font-size:.7rem;color:var(--emerald)">✓ Signed in</div></div>
-      </div>
-      <button onclick="signOut()" style="width:100%;padding:.4rem;background:transparent;border:1px solid var(--border);border-radius:6px;color:var(--text2);font-family:'Cairo',sans-serif;font-size:.8rem;cursor:pointer;transition:color .15s">Sign Out</button>`;
-  }else{
-    haAvatar.innerHTML='<span>👤</span>'; haLabel.textContent='Sign In'; haLabel.className='ha-label';
-    document.getElementById('composerAv').innerHTML='<span>👤</span>';
-    document.getElementById('composerUser').textContent='Not signed in';
-    document.getElementById('postBtn').disabled=true;
-    sideBody.innerHTML=`<p style="font-size:.8rem;color:var(--text2);line-height:1.6;margin-bottom:.75rem">Sign in with your Minecraft username to leave comments.</p><button onclick="openModal()" style="width:100%;padding:.5rem;background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.25);border-radius:7px;color:var(--accent);font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer">🎮 Sign In</button>`;
-  }
+function goPage(p) {
+  const pages = Math.ceil(filteredMods.length / PAGE_SIZE);
+  if (p < 1 || p > pages) return;
+  currentPage = p; renderMods();
+  document.getElementById('mods-section').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-function headerAccountClick(){if(currentUser){openComposer();document.getElementById('comments-section').scrollIntoView({behavior:'smooth'});}else{openModal();}}
-function signOut(){currentUser=null;document.getElementById('composer').classList.remove('open');updateAccountUI();}
-
-// ═══ COMPOSER ═══
-function openComposer(){document.getElementById('composer').classList.add('open');setTimeout(()=>document.getElementById('cmtText').focus(),50);}
-function closeComposer(){document.getElementById('composer').classList.remove('open');document.getElementById('cmtText').value='';}
-function clickWrite(){if(!currentUser){openModal();return;}document.getElementById('composer').classList.toggle('open');if(document.getElementById('composer').classList.contains('open'))setTimeout(()=>document.getElementById('cmtText').focus(),50);}
-
-// ═══ COMMENTS ═══
-const CMT_KEY='miracul212_v103_comments';
-let comments=[];
-
-function loadComments(){
-  try{comments=JSON.parse(localStorage.getItem(CMT_KEY))||getDefaults();}catch(e){comments=getDefaults();}
-  renderComments();
-}
-function getDefaults(){
-  return[
-    {id:1,username:'Nastia',avatarUrl:'https://crafatar.com/avatars/Nastia?size=64&default=MHF_Steve&overlay',text:'Welcome to the Miracul212 v1.0.3 wiki! Feel free to ask questions or share your in-game experience. 💎',time:Date.now()-86400000*3,likes:14,liked:false},
-    {id:2,username:'SteveMC',avatarUrl:'https://crafatar.com/avatars/SteveMC?size=64&default=MHF_Steve&overlay',text:'The performance is incredible — Embeddium + ModernFix 5.27.8 made a huge difference. Went from 45fps to 130fps on my setup. Allocate 8GB RAM for the best experience!',time:Date.now()-86400000*2,likes:9,liked:false},
-    {id:3,username:'Alex',avatarUrl:'https://crafatar.com/avatars/Alex?size=64&default=MHF_Steve&overlay',text:'Loving the updated Entity Model Features 3.1.1! The mobs look so much more alive now. Great update overall 🦁',time:Date.now()-3600000*8,likes:5,liked:false},
-  ];
-}
-function save(){try{localStorage.setItem(CMT_KEY,JSON.stringify(comments));}catch(e){}}
-function fmtTime(ts){const d=Date.now()-ts;if(d<60000)return'just now';if(d<3600000)return Math.floor(d/60000)+'m ago';if(d<86400000)return Math.floor(d/3600000)+'h ago';if(d<604800000)return Math.floor(d/86400000)+'d ago';return new Date(ts).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-
-function renderComments(){
-  const list=document.getElementById('cmtList');
-  const empty=document.getElementById('cmtEmpty');
-  const badge=document.getElementById('cmtBadge');
-  const toc=document.getElementById('tocCmtCount');
-  badge.textContent=comments.length+' comment'+(comments.length!==1?'s':'');
-  toc.textContent=comments.length;
-  if(comments.length===0){list.innerHTML='';empty.style.display='block';return;}
-  empty.style.display='none';
-  list.innerHTML=[...comments].reverse().map(c=>`
-    <div class="comment-card" id="c${c.id}">
-      <div class="comment-top">
-        <img class="comment-av" src="${c.avatarUrl}" alt="${esc(c.username)}" onerror="this.src='https://crafatar.com/avatars/MHF_Steve?size=64'">
-        <div style="flex:1">
-          <div class="comment-name">${esc(c.username)}<span class="mc-badge">⛏ MC Player</span></div>
-          <div class="comment-time">${fmtTime(c.time)}</div>
-        </div>
-      </div>
-      <div class="comment-body">${esc(c.text).replace(/\n/g,'<br>')}</div>
-      <div class="comment-footer">
-        <button class="like-btn ${c.liked?'liked':''}" onclick="toggleLike(${c.id})">${c.liked?'❤️':'🤍'} ${c.likes}</button>
-        ${currentUser?`<button class="reply-btn" onclick="setReply('${esc(c.username)}')">↩ Reply</button>`:''}
-        ${currentUser&&currentUser.username===c.username?`<button class="del-btn" onclick="deleteComment(${c.id})">🗑 Delete</button>`:''}
+function buildShaderGrid() {
+  const lc = {'High-End':'var(--ruby)','Mid-Range':'var(--accent5)','Lightweight':'var(--emerald)','Tex Pack':'var(--amethyst)'};
+  document.getElementById('shaderGrid').innerHTML = SHADERS.map(s=>`
+    <div class="shader-card">
+      <div class="shader-thumb" style="--c1:${s.c1};--c2:${s.c2}"><span>${s.emoji}</span></div>
+      <div class="shader-body">
+        <div class="shader-name">${s.name}</div>
+        <div class="shader-ver">${s.file}</div>
+        <div style="margin-top:.4rem"><span class="type-tag" style="background:rgba(0,0,0,.2);color:${lc[s.level]};border:1px solid ${lc[s.level]}40">${s.level}</span></div>
       </div>
     </div>`).join('');
 }
 
-function toggleLike(id){const c=comments.find(x=>x.id===id);if(!c)return;c.liked=!c.liked;c.likes+=c.liked?1:-1;if(c.likes<0)c.likes=0;save();renderComments();}
-function deleteComment(id){if(!confirm('Delete your comment?'))return;comments=comments.filter(x=>x.id!==id);save();renderComments();}
-function setReply(name){if(!currentUser){openModal();return;}const ta=document.getElementById('cmtText');ta.value=`@${name} `;openComposer();ta.focus();}
+function buildRPGrid() {
+  document.getElementById('rpGrid').innerHTML = RESOURCE_PACKS.map(r=>`
+    <div class="rp-card">
+      <div class="rp-icon">${r.icon}</div>
+      <div>
+        <div class="rp-name">${r.name}</div>
+        <div class="rp-desc">${r.desc}</div>
+        <div style="margin-top:.3rem;font-size:.7rem;color:var(--text3);font-family:monospace">${r.file}</div>
+      </div>
+    </div>`).join('');
+}
 
-function postComment(){
-  if(!currentUser){openModal();return;}
-  const text=document.getElementById('cmtText').value.trim();
-  if(!text||text.length<2)return;
-  comments.push({id:Date.now(),username:currentUser.username,avatarUrl:currentUser.avatarUrl,text,time:Date.now(),likes:0,liked:false});
-  save(); document.getElementById('cmtText').value=''; closeComposer(); renderComments();
-  setTimeout(()=>{const el=document.getElementById('cmtList').firstElementChild;if(el)el.scrollIntoView({behavior:'smooth',block:'center'});},100);
+function handleGlobalSearch(q) {
+  if (!q) return;
+  document.getElementById('modSearch').value = q;
+  filterMods();
+  document.getElementById('mods-section').scrollIntoView({behavior:'smooth'});
+}
+
+function setupScrollSpy() {
+  const ids = ['overview','changelog','features','mods-section','shaders-section','rp-section','install-section','requirements','credits'];
+  const links = document.querySelectorAll('.toc-item a');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const m = document.querySelector(`.toc-item a[href="#${e.target.id}"]`);
+        if (m) m.classList.add('active');
+      }
+    });
+  }, {rootMargin:'-25% 0px -65% 0px'});
+  ids.forEach(id => { const el = document.getElementById(id); if(el) obs.observe(el); });
 }
 </script>
 </body>
